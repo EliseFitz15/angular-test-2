@@ -1,0 +1,17 @@
+development:
+ adapter: postgresql
+ encoding: unicode
+ database: ef-angular2-js_development
+ pool: 5
+ username:
+ password:
+ host: 127.0.0.1
+
+test:
+ adapter: postgresql
+ encoding: unicode
+ database: ef-angular2-js_test
+ pool: 5
+ username:
+ password:
+ host: 127.0.0.1

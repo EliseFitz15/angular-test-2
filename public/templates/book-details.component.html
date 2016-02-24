@@ -1,0 +1,23 @@
+<div id="book-details">
+  <div *ngIf="book" id="book">
+    <h2 class="title">{{ book.book.title }}</h2>
+    <h3 class="author">by {{ book.book.author }}</h3>
+    <p class="description">{{ book.book.description }}</p>
+    <span class="rating">({{ book.book.average_review_score }})</span>
+  </div>
+
+  <a [routerLink]="['Books']" class="button">&larr; Back</a>
+</div>
+
+<div id="review-list-wrapper">
+  <h2>Reviews</h2>
+
+  <ul id="review-list" *ngFor="#review of reviews" class="review">
+    <li *ngFor="#review of reviews" class="review">
+        <p class="score">{{ review.review.score }}</p>
+        <p *ngIf=[review.description] class="description">
+          {{ review.review.description }}
+        </p>
+    </li>
+  </ul>
+</div>
